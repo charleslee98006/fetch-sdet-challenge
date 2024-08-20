@@ -1,0 +1,17 @@
+{
+  "name": "fetch-sdet-challenge",
+  "version": "1.0.0",
+  "description": "fetch coding challenge",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "author": "Charles Lee",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "@types/node": "^22.4.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
