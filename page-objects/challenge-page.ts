@@ -5,6 +5,7 @@ export class ChallengePage {
   readonly resetButton: Locator;
   readonly weighButton: Locator;
   readonly resultSign: Locator;
+  readonly resultQuestionMark: Locator;
   readonly weightResultList: Locator;
 
   constructor(page: Page) {
@@ -12,11 +13,12 @@ export class ChallengePage {
     this.resetButton = page.getByRole('button', { name: 'Reset' });
     this.weighButton = page.getByRole('button', { name: 'Weigh' });
     this.resultSign = page.locator('.result >button');
-    this.weightResultList = page.locator('ol > li');;
+    this.weightResultList = page.locator('ol > li');
+    this.resultQuestionMark = page.getByRole('button', {name: '?'});
   }
 
-  async bowlGridElement(side: string = '', position: string = '') {
-    return this.page.locator('#'+side+'_'+position);
+  async bowlGridElement(side: string = '', position: number) {
+    return this.page.locator('#' + side + '_' + position);
   };
 
   async coinsRow(position: string = '') {
